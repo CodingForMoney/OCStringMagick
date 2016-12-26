@@ -1,0 +1,17 @@
+//
+//  OCSMExample.pch
+//  OCSMExample
+//
+//  Created by lxm on 2016/12/26.
+//  Copyright © 2016年 lxm. All rights reserved.
+//
+
+#ifndef OCSMExample_pch
+#define OCSMExample_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "OCStringMagick.h"
+
+#endif /* OCSMExample_pch */

@@ -1,0 +1,55 @@
+//
+//  ViewController.m
+//  OCSMExample
+//
+//  Created by lxm on 2016/12/26.
+//  Copyright © 2016年 lxm. All rights reserved.
+//
+
+#import "ViewController.h"
+
+#define OCSMSTRING2 MUENCODESTRING""
+
+@interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *label1;
+@property (weak, nonatomic) IBOutlet UILabel *label2;
+@property (weak, nonatomic) IBOutlet UIButton *button1;
+@property (weak, nonatomic) IBOutlet UIButton *button2;
+
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+    self.label1.text = OCSMSTRING1;
+    self.label2.text = OCSMSTRING2;
+//    [self.button1 setTitle:@"" forState:UIControlStateNormal];
+//    [self.button2 setTitle:@"" forState:UIControlStateNormal];
+//    [self.button1 addTarget:self action:NSSelectorFromString(@"actionA") forControlEvents:UIControlEventTouchUpInside];
+    [self.button1 setTitle:MUENCODESTRING"" forState:UIControlStateNormal];
+    [self.button2 setTitle:MUENCODESTRING"" forState:UIControlStateNormal];
+    [self.button1 addTarget:self action:NSSelectorFromString(MUENCODESTRING"actionA") forControlEvents:UIControlEventTouchUpInside];
+    [self.button1 addTarget:self action:@selector(actionB) forControlEvents:UIControlEventTouchUpInside];
+}
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+    MUENCODESTRING"";
+}
+
+- (void)actionA{
+    NSLog(@"点击按钮一 ： %@",@"前面的内容，我们无法加密");
+}
+
+- (void)actionB{
+//    NSURL *url = [NSURL URLWithString:@"http://www.baidu.com"];
+    NSURL *url = [NSURL URLWithString:MUENCODESTRING"http://www.baidu.com"];
+    [NSURLConnection sendSynchronousRequest:[NSURLRequest requestWithURL:url] returningResponse:nil error:nil];
+}
+
+
+@end
